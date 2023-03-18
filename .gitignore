@@ -1,3 +1,6 @@
+# Repos specific exclude binary
+dwm
+
 # Prerequisites
 *.d
 
