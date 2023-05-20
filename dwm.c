@@ -1355,7 +1355,7 @@ recttomon(int x, int y, int w, int h)
 void
 resetnmaster(const Arg *arg)
 {
-	selmon->nmaster = selmon->pertag->nmasters[selmon->pertag->curtag] = 1;
+	selmon->nmaster = selmon->pertag->nmasters[selmon->pertag->curtag] = arg->i;
 	arrange(selmon);
 }
 
