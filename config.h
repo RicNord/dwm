@@ -25,9 +25,6 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { col_gray4, col_cyan,  col_red  },
 };
 
-/* zendeck gap factor */
-static const float gappfaczen = 0.25; /* factor of vertical monitor size */
-
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
@@ -56,7 +53,6 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 	{ "H[]",      deck },
-	{ "H[]",      zendeck },
     { "|||",      col },
 	{ "|M|",      centeredmaster },
 	{ ">M>",      centeredfloatingmaster },
@@ -132,10 +128,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
     { MODKEY,                       XK_r,      setlayout,      {.v = &layouts[3]} },
-    { MODKEY,                       XK_z,      setlayout,      {.v = &layouts[4]} },
-    { MODKEY,                       XK_y,      setlayout,      {.v = &layouts[5]} },
-    { MODKEY,                       XK_u,      setlayout,      {.v = &layouts[6]} },
-    { MODKEY|ShiftMask,             XK_u,      setlayout,      {.v = &layouts[7]} },
+    { MODKEY,                       XK_y,      setlayout,      {.v = &layouts[4]} },
+    { MODKEY,                       XK_u,      setlayout,      {.v = &layouts[5]} },
+    { MODKEY|ShiftMask,             XK_u,      setlayout,      {.v = &layouts[6]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
