@@ -13,6 +13,7 @@ all: dwm
 
 ${OBJ}: config.h config.mk
 
+.PHONY: config.h
 config.h:
 	cp config.def.h $@
 
